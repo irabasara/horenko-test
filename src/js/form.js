@@ -17,6 +17,11 @@ validation
         value: 2,
         errorMessage: 'Минімум 2 символи!',
       },
+      {
+        rule: 'customRegexp',
+        value: /[A-Za-z-А-Яа-я]/gi,
+        errorMessage: 'ім’я має складатися тільки із літер',
+      },
     ],
     {
       errorsContainer: '.error-name',
