@@ -1,0 +1,123 @@
+.hero {
+  line-height: 1.3;
+  background: linear-gradient(
+    0deg,
+    rgba(212, 227, 236, 0.3) -2.603%,
+    rgba(247, 249, 251, 0.3) 100%
+  );
+
+  &_slide {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $small-dextop) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: $medium) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &_photo {
+    @media (max-width: $small-dextop) {
+      width: 50%;
+    }
+    @media (max-width: $medium) {
+      width: 100%;
+    }
+  }
+  &_photo img {
+    max-width: 560px;
+    max-height: 380px;
+    object-fit: cover;
+    @media (max-width: $small-dextop) {
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 240px;
+      min-height: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  .brand-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 340px;
+    @media (max-width: $small-dextop) {
+      margin-right: auto;
+      gap: 10px;
+      max-width: 200px;
+    }
+
+    h2 {
+      @include adaptiv-font(28, 50);
+      font-weight: 500;
+    }
+
+    p {
+      @include adaptiv-font(13, 20);
+      font-weight: 300;
+    }
+
+    .button {
+      @media (max-width: $small-dextop) {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .info-block {
+    max-width: 320px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media (max-width: $small-dextop) {
+      flex-direction: row;
+      max-width: 100%;
+      margin-left: auto;
+      align-items: end;
+      gap: 20px;
+    }
+    @media (max-width: $medium) {
+      max-width: 160px;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+    }
+
+    .product-name,
+    .model {
+      @include adaptiv-font(14, 24);
+      font-weight: 300;
+    }
+
+    .model {
+      font-weight: 500;
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+  }
+
+  .swiper {
+    padding-bottom: 65px;
+  }
+
+  .swiper-pagination,
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    bottom: 0;
+    margin-top: auto;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--white);
+  }
+
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: var(--primary);
+  }
+}

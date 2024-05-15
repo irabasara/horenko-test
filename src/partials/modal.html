@@ -1,0 +1,65 @@
+<div id="modal-container">
+  <div class="modal-background">
+    <div class="modal">
+      <img
+        src="./images/close.svg"
+        alt="close"
+        width="22"
+        height="22"
+        class="modal-close"
+      />
+      <h2>Залишайте заявку</h2>
+      <p class="desr">Ми зв’яжемося з вами найближчим часом.</p>
+
+      <form action="#" id="form">
+        <div class="name-wrap">
+          <input
+            type="text"
+            name="name"
+            class="username"
+            placeholder="Ваше ім’я*"
+            autocomplete="off"
+            minlength="2"
+            pattern="[A-Za-z]+"
+            required
+          />
+        </div>
+        <div class="error-name"></div>
+        <div class="phone-wrap">
+          <input
+            id="phone"
+            class="phone"
+            type="text"
+            name="phone"
+            placeholder="+380-00-000-00-00*"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="error-phone"></div>
+        <button type="submit" class="button primary">Відправить</button>
+        <p>
+          Натискаючи кнопку “Надіслати”, ви погоджуєтесь з
+          <a href="#">Правилами обробки персональних даних</a>.
+        </p>
+      </form>
+    </div>
+    <div class="thanks" style="display: none">
+      <img
+        src="./images/close.svg"
+        alt="close"
+        width="22"
+        height="22"
+        class="modal-close"
+      />
+      <div class="thanks-wrap">
+        <img src="./images/quality.svg" alt="quality" />
+        <h2>
+          Дякуємо <br />
+          за заявку!
+        </h2>
+        <p>Ваші дані успішно надіслані!</p>
+      </div>
+    </div>
+  </div>
+</div>

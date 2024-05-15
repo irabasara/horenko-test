@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900);
+
+body {
+  @include adaptiv-font(14, 16);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.1; /* 19/16 */
+  letter-spacing: 0%;
+  color: var(--black);
+  &.active {
+    overflow: hidden;
+  }
+}
+
+section {
+  padding: 80px 0;
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+[class*='__container'] {
+  max-width: $large;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+@media (max-width: $medium) {
+  [class*='__container'] {
+    max-width: $medium;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: $small) {
+  body {
+    font-size: 14px;
+  }
+}

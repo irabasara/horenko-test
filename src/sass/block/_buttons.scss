@@ -1,0 +1,30 @@
+.button {
+  @include adaptiv-font(12, 16);
+  padding: 13px 29px;
+  font-weight: 500;
+  border-radius: 5px;
+  width: fit-content;
+  transition: $transition;
+  @media (max-width: $large) {
+    padding: 8px 19px;
+  }
+  &.primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    &:hover,
+    &:focus {
+      background-color: var(--hover);
+    }
+  }
+  &.outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    &:hover,
+    &:focus {
+      border-color: var(--hover);
+      color: var(--hover);
+    }
+  }
+}

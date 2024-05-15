@@ -1,0 +1,17 @@
+:root {
+  --black: #333;
+  --white: #fff;
+  --primary: #859ba6;
+  --hover: #68818e;
+  --light-grey: #cacaca;
+  --dark-grey: #252525;
+}
+
+$small: 320px;
+$medium: 768px;
+$small-dextop: 1240px;
+$large: 1439px;
+$maxWidth: 1440;
+
+$transition: all 500ms ease;
+$shadow: 0 0px 45px -16px rgb(169, 169, 169);
